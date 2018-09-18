@@ -28,6 +28,16 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/books', (req, res) => {
+  client.query('SELECT title, author, image_url FROM books;')
+  .then( (result) => {
+    res.render('index', {
+      pageTitle: 'All the books:',
+      books: result.rows
+    });
+  });
+});
+
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`);
