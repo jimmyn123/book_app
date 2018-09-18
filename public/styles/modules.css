@@ -1,0 +1,21 @@
+h1, p{
+  text-align: center;
+}
+
+ul{
+  text-align: center;
+  list-style-type: none;
+}
+
+span{
+  display: block;
+}
+
+li, p{
+  margin-top: 40px;
+}
+
+p{
+  border: 2px solid black;
+  font-size: 30px;
+}
