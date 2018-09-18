@@ -22,19 +22,11 @@ app.use(express.static('./public'));
 
 app.set('view engine', 'ejs');
 
-app.get('/hello', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index', {
-      pageTitle: 'Hello World!'
+      pageTitle: 'Welcome to Books App!'
   });
 });
-
-// app.get('/', (req, res) => {
-//   client.query()
-//     .then( (result) => {
-
-//       });
-//     })
-// });
 
 
 app.listen(PORT, () => {
