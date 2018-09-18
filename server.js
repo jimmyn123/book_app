@@ -16,7 +16,7 @@ client.on('error', error => {
 });
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('./public'));
 
 
@@ -28,13 +28,15 @@ app.get('/', (req, res) => {
 
 app.get('/books', (req, res) => {
   client.query('SELECT title, author, image_url FROM books;')
-  .then( (result) => {
-    res.render('index', {
-      pageTitle: 'All the books:',
-      books: result.rows
+    .then((result) => {
+      res.render('index', {
+        pageTitle: 'All the books:',
+        books: result.rows
+      });
     });
-  });
 });
+
+app.use((req, res) => res.render('error'));
 
 
 app.listen(PORT, () => {
