@@ -9,7 +9,7 @@ client.on('error', error => {
 
 // Helper callback functions for server.js
 function getBooks(req, res) {
-  const SQL = 'SELECT title, author, image_url FROM books;';
+  let SQL = 'SELECT id, title, author, image_url FROM books;';
   client.query(SQL)
   .then((result) => {
     res.render('index', {
@@ -19,7 +19,20 @@ function getBooks(req, res) {
   });
 }
 
+function getOneBook(req, res) {
+  let SQL = 'SELECT * FROM books WHERE id = $1';
+  let values = [req.params.id];
+  client.query(SQL, values, (err, result) => {
+    if(err){
+      console.error(err);
+      res.redirect('/error');
+    }else{
+      res.render('show', {book: result.rows[0]});
+    }
+  })
+}
+
 module.exports = {
   getBooks: getBooks,
-
+  getOneBook: getOneBook
 };

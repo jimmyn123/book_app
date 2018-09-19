@@ -22,7 +22,8 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => res.redirect('/books'));
 app.get('/books', books.getBooks);
 
-
+// books show details of one book
+app.get('/books/:id', books.getOneBook);
 
 app.use((req, res) => res.render('error'));
 
