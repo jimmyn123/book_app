@@ -11,6 +11,10 @@ span{
   display: block;
 }
 
+span.desc {
+  font-family: helvetica, sans-serif;
+}
+
 li, p{
   margin-top: 40px;
 }
@@ -18,4 +22,16 @@ li, p{
 p{
   border: 2px solid black;
   font-size: 30px;
+}
+
+.book-left {
+  width: 30%;
+}
+
+.book-right {
+  width: 70%;
+}
+
+img {
+  width: 200px;
 }

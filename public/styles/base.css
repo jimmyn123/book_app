@@ -1,5 +1,9 @@
 body{
   width: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   margin: auto;
   font-family: 'Noto Serif JP', sans-serif;
+  background-color: burlywood;
 }
