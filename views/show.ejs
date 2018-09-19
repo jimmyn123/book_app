@@ -6,12 +6,16 @@
   <%- include('partials/header', {pageTitle: book.title}); %>
   <span id="author">By:
     <%= book.author %></span>
-  <div>
-    <img id="book-img" src="<%= book.image_url %>">
-    <span id="ISBN">ISBN:
-      <%= book.isbn %></span>
-    <span>
-      <%= book.description %></span>
+  <div id="book-container">
+    <div class="book-left">
+      <img id="book-img" src="<%= book.image_url %>">
+      <span id="ISBN">ISBN:
+        <%= book.isbn %></span>
+    </div>
+    <div class="book-right">
+      <span class="desc">
+        <%= book.description %></span>
+    </div>
   </div>
 
   <%- include('partials/footer') %>
