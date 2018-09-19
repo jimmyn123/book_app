@@ -12,18 +12,10 @@
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
 </head>
 <body>
-  <h1><%= pageTitle %></h1>
-  <ul>
-    <% books.forEach( book => {  %>
-      <li class="book-li">
-          <a href="/books/<%= book.id %>">
-            <span id="title">Title: <%= book.title %></span>
-          </a>
-          <span id="author">Author: <%= book.author %></span>
-          <img id="book-img" src= "<%= book.image_url %>">
-      </li>
-    <% }) %>
-  </ul>
-  <p id="book-ct">Book Count: <%= books.length %></p>
+  <span id="title">Title: <%= book.title %></span>
+  </a>
+  <span id="author">Author: <%= book.author %></span>
+  <img id="book-img" src= "<%= book.image_url %>">
+  <a href="/books">Home</a>
 </body>
 </html>
