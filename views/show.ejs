@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Books App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/styles/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/base.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/layout.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/modules.css" />
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
-</head>
+<%- include('partials/head'); %>
+
 <body>
-  <span id="title">Title: <%= book.title %></span>
-  </a>
-  <span id="author">Author: <%= book.author %></span>
-  <img id="book-img" src= "<%= book.image_url %>">
-  <a href="/books">Home</a>
+  <%- include('partials/header', {pageTitle: book.title}); %>
+  <span id="author">By:
+    <%= book.author %></span>
+  <div>
+    <img id="book-img" src="<%= book.image_url %>">
+    <span id="ISBN">ISBN:
+      <%= book.isbn %></span>
+    <span>
+      <%= book.description %></span>
+  </div>
+
+  <%- include('partials/footer') %>
 </body>
+
 </html>
