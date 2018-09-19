@@ -1,6 +1,6 @@
 'use strict';
 
-const pg = require('pg');
+
 const express = require('express');
 const ejs = require('ejs');
 require('dotenv').config()
@@ -8,12 +8,8 @@ require('dotenv').config()
 const PORT = process.env.PORT;
 const app = express();
 
-const conString = process.env.DATABASE_URL;
-const client = new pg.Client(conString);
-client.connect();
-client.on('error', error => {
-  console.error(error);
-});
+// Include books.js for helper callbacks
+const books = require('./books.js');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -22,19 +18,10 @@ app.use(express.static('./public'));
 
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-  res.redirect('/books');
-});
+// books index: show all of the books
+app.get('/', (req, res) => res.redirect('/books'));
 
-app.get('/books', (req, res) => {
-  client.query('SELECT title, author, image_url FROM books;')
-    .then((result) => {
-      res.render('index', {
-        pageTitle: 'All the books:',
-        books: result.rows
-      });
-    });
-});
+app.get('/books', books.getBooks);
 
 app.use((req, res) => res.render('error'));
 
