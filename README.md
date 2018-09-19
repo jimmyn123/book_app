@@ -23,6 +23,13 @@ HTML, Javascript, CSS, Express, EJS, DOTENV, PG, Heroku, GitHub
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
 -->
+09-19-2018 11:11am - Added partials, css.
+09-19-2018 9:25am - Refactored into callbacks.
+09-18-2018 12:25pm - Added css, layout.
+09-18-2018 11:37am - Implemented index/books page.
+09-18-2018 10:15 - Set up DB, server jS.
+09-18-2018 9:30am - Set up SQL.
+09-18-2018 9:00am - Set up environment.
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
