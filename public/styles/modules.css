@@ -73,7 +73,34 @@ img {
   margin-top: 5px;
 }
 
+form{
+  text-align: center;
+}
 
+input, textarea{
+  display: block;
+  margin: 30px auto;
+  width: 45%;
+  padding: 10px 10px;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+input::placeholder, textarea::placeholder{
+  color: black;
+}
+
+textarea{
+  height: 200px;
+}
+
+input.submit{
+  width: 180px;
+  height: 60px;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 5px;
+}
 
 a {
   text-decoration: none;
