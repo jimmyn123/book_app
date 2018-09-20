@@ -25,14 +25,9 @@ app.get('/books/new', (req, res) => res.render('new'));
 
 
 // books show details of one book
-app.get('/books/:id', books.getOneBook);
+app.get('/books/:id/:new', books.getOneBook);
 
-app.post('/books', (req, res) => {
-  console.log('Hits route');
-  books.postBook;
-  console.log('Second');
-});
-
+app.post('/books', books.createBook);
 app.use((req, res) => res.render('error'));
 
 app.listen(PORT, () => {

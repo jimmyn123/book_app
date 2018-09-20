@@ -26,33 +26,36 @@ function getOneBook(req, res) {
       console.error(err);
       res.redirect('/error');
     } else {
-      res.render('show', { book: result.rows[0] });
+      res.render('show', { book: result.rows[0], show: {new: req.params.new} });
     }
-  })
+  });
 }
 
-function postBook(req, res) {
+function createBook(req, res) {
   console.log('Post received');
 
-  let SQL = 'INSERT INTO books(title, author, image_url, ISBN) VALUES ($1, $2, $3, $4) RETURNING id';
+  let SQL = 'INSERT INTO books(title, author, image_url, ISBN, description) VALUES ($1, $2, $3, $4, $5) RETURNING id';
   let values = [
     req.body.title,
     req.body.author,
     req.body.image_url,
-    req.body.ISBN
+    req.body.isbn, 
+    req.body.description
   ];
   client.query(SQL, values, (err, result) => {
     if (err) {
       console.error(err);
       res.redirect('/error');
     } else {
-      res.redirect(`/book/:${result.rows[0].id}`);
+      res.redirect(`/books/${result.rows[0].id}/true`);
     }
   });
 }
 
+
+
 module.exports = {
   getBooks: getBooks,
   getOneBook: getOneBook,
-  postBook: postBook
-};
+  createBook: createBook
+}
