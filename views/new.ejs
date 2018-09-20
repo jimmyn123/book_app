@@ -5,17 +5,12 @@
 <body>
   <%- include('partials/header', {pageTitle: 'Add A New Book!'}) %>
   <form method="POST" action="/books">
-    <label for="title">Title: </label>
-    <input type="text" id="title" name="title" />
-    <label for="author">Author: </label>
-    <input type="text" id="author" name="author" />
-    <label for="image_url">Image Url: </label>
-    <input type="text" id="image_url" name="image_url" />
-    <label for="ISBN">ISBN: </label>
-    <input type="text" id="ISBN" name="isbn" pattern="[\d]{13}" />
-    <label for="description">Description: </label>
-    <textarea id="description" name="description"></textarea>
-    <input type="submit" />
+    <input placeholder="Title" type="text" id="title" name="title" />
+    <input placeholder="Author" type="text" id="author" name="author" />
+    <input placeholder="Image URL" type="text" id="image_url" name="image_url" />
+    <input placeholder="ISBN 13 " type="text" id="ISBN" name="isbn" pattern="[\d]{13}" />
+    <textarea placeholder="Description" id="description" name="description"></textarea>
+    <input class="submit" type="submit" />
   </form>
 </body>
 </html>
