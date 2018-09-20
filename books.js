@@ -28,7 +28,7 @@ function getOneBook(req, res) {
     } else {
       res.render('show', { book: result.rows[0], show: {new: req.params.new} });
     }
-  })
+  });
 }
 
 function createBook(req, res) {
