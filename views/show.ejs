@@ -2,6 +2,9 @@
 <html>
 <%- include('partials/head'); %>
 <body>
+  <% if (show.new == 'true') { %>
+    <p id="success-msg">Book successfully added!</p>
+  <% } %>
   <%- include('partials/header', {pageTitle: book.title}); %>
   <span id="author">By:
     <%= book.author %></span>

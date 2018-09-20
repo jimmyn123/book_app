@@ -26,7 +26,7 @@ function getOneBook(req, res) {
       console.error(err);
       res.redirect('/error');
     } else {
-      res.render('show', { book: result.rows[0] });
+      res.render('show', { book: result.rows[0], show: {new: req.params.new} });
     }
   })
 }
@@ -47,7 +47,7 @@ function createBook(req, res) {
       console.error(err);
       res.redirect('/error');
     } else {
-      res.redirect(`/books/${result.rows[0].id}`);
+      res.redirect(`/books/${result.rows[0].id}/true`);
     }
   });
 }
