@@ -25,6 +25,15 @@ div.hamburger-menu {
   margin: 6px 0;
 }
 
+.menu {
+  width: 35px;
+  display: none;
+}
+
+.title {
+  width: 100%;
+}
+
 span{
   display: block;
 }
@@ -89,4 +98,11 @@ a:hover {
   font-size: 1em;}
   to {
   font-size: 1.25em;}
+}
+
+@media (max-width:640px) {
+  .menu {
+    width: 35px;
+    display: inline-block;
+  }
 }
