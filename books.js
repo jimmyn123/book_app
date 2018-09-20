@@ -31,7 +31,28 @@ function getOneBook(req, res) {
   })
 }
 
+function postBook(req, res) {
+  console.log('Post received');
+
+  let SQL = 'INSERT INTO books(title, author, image_url, ISBN) VALUES ($1, $2, $3, $4) RETURNING id';
+  let values = [
+    req.body.title,
+    req.body.author,
+    req.body.image_url,
+    req.body.ISBN
+  ];
+  client.query(SQL, values, (err, result) => {
+    if (err) {
+      console.error(err);
+      res.redirect('/error');
+    } else {
+      res.redirect(`/book/:${result.rows[0].id}`);
+    }
+  });
+}
+
 module.exports = {
   getBooks: getBooks,
-  getOneBook: getOneBook
+  getOneBook: getOneBook,
+  postBook: postBook
 };

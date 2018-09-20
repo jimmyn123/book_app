@@ -3,7 +3,7 @@ A book app that saves and displays books using a back end database.
 
 **Author**: Kendra Ellis and Jimmy Nguyen
 
-**Version**: 1.1.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.3.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
@@ -23,6 +23,8 @@ HTML, Javascript, CSS, Express, EJS, DOTENV, PG, Heroku, GitHub
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
 -->
+09-20-2018 8:45am - More styling.
+09-19-2018 9:19pm - Added css. 
 09-19-2018 11:11am - Added partials, css.
 09-19-2018 9:25am - Refactored into callbacks.
 09-18-2018 12:25pm - Added css, layout.

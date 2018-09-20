@@ -21,12 +21,19 @@ app.set('view engine', 'ejs');
 // books index: show all of the books
 app.get('/', (req, res) => res.redirect('/books'));
 app.get('/books', books.getBooks);
+app.get('/books/new', (req, res) => res.render('new'));
+
 
 // books show details of one book
 app.get('/books/:id', books.getOneBook);
 
-app.use((req, res) => res.render('error'));
+app.post('/books', (req, res) => {
+  console.log('Hits route');
+  books.postBook;
+  console.log('Second');
+});
 
+app.use((req, res) => res.render('error'));
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`);
