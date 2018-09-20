@@ -1,5 +1,10 @@
 h1, p{
   text-align: center;
+  padding: 20px;
+  background-color: darkcyan;
+  box-shadow: 3px 3px grey;
+  margin: auto;
+  width: 85%;
 }
 
 ul{
@@ -7,6 +12,7 @@ ul{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  padding: 0px;
 }
 
 span{
@@ -17,21 +23,17 @@ span.desc {
   font-family: helvetica, sans-serif;
 }
 
-p{
-  margin-top: 40px;
-}
-
-p{
-  border: 2px solid black;
-  font-size: 30px;
+#book-ct {
+  width: 200px;
 }
 
 .book-left, .book-right {
+  background-color: darkcyan;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   padding: 20px;
-  background-color: darkcyan;
+  /* background-color: darkcyan; */
   box-shadow: 3px 3px grey;
 }
 
@@ -51,9 +53,9 @@ img {
 .books {
   text-align: center;
   width: 200px;
-  background-color: darkcyan;
   margin: 10px 10px;
-  padding: 20px;
+  padding: 5px;
+  background-color: darkcyan;
   box-shadow: 3px 3px grey;
 }
 
@@ -71,8 +73,8 @@ a:hover {
 }
 
 @keyframes link {
-  from {color:black;
+  from {
   font-size: 1em;}
-  to {color: yellow;
+  to {
   font-size: 1.25em;}
   }
