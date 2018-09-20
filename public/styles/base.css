@@ -1,8 +1,6 @@
 body{
-  width: 70%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  margin: auto;
+  margin: 0 auto;
   font-family: 'Noto Serif JP', sans-serif;
+  background-color: lightgrey;
+  width: 70%;
 }
