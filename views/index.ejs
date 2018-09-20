@@ -6,15 +6,17 @@
   <%- include('partials/header', {pageTitle: 'All Our Books!'}) %>
   <ul>
     <% books.forEach( book => {  %>
-    <li class="book-li">
-      <a href="/books/<%= book.id %>">
+    <div class="books">
+      <li class="book-li">
         <span id="title">Title:
           <%= book.title %></span>
-      </a>
-      <span id="author">Author:
-        <%= book.author %></span>
-      <img id="book-img" src="<%= book.image_url %>">
-    </li>
+        <span id="author">Author:
+          <%= book.author %></span>
+        <img id="book-img" src="<%= book.image_url %>">
+        <a href="/books/<%= book.id %>">
+          View Details --></a>
+      </li>
+    </div>
     <% }) %>
   </ul>
   <p id="book-ct">Book Count:

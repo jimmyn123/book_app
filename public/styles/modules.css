@@ -3,8 +3,10 @@ h1, p{
 }
 
 ul{
-  text-align: center;
   list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 span{
@@ -15,7 +17,7 @@ span.desc {
   font-family: helvetica, sans-serif;
 }
 
-li, p{
+p{
   margin-top: 40px;
 }
 
@@ -24,14 +26,53 @@ p{
   font-size: 30px;
 }
 
+.book-left, .book-right {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: darkcyan;
+  box-shadow: 3px 3px grey;
+}
+
 .book-left {
-  width: 30%;
+  width: 220px;
+  margin-right: 20px;
 }
 
 .book-right {
-  width: 70%;
+  width: auto;
 }
 
 img {
   width: 200px;
 }
+
+.books {
+  text-align: center;
+  width: 200px;
+  background-color: darkcyan;
+  margin: 10px 10px;
+  padding: 20px;
+  box-shadow: 3px 3px grey;
+}
+
+.books img {
+  margin-top: 5px;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+a:hover {
+  animation: link 1s ease-in-out 0s infinite alternate;
+}
+
+@keyframes link {
+  from {color:black;
+  font-size: 1em;}
+  to {color: yellow;
+  font-size: 1.25em;}
+  }
