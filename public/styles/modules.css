@@ -18,6 +18,10 @@ ul{
   padding: 0px;
 }
 
+nav ul li {
+  margin: 5px;
+}
+
 div.hamburger-menu {
   width: 35px;
   height: 5px;
@@ -124,20 +128,29 @@ div.radio{
   background-color: gray;
 }
 
-input {
-  display: inline;
-}
-
 input.submit{
   width: 450px;
   height: 60px;
   background-color: black;
   color: whitesmoke;
   border-radius: 5px;
+  margin: 25px auto;
+}
+
+.radio-btns, label {
+  display: inline-block;
+}
+
+textarea {
+  margin: 0px auto;
+  width: 45%;
+  padding: 10px 10px;
+  font-family: sans-serif;
+  font-size: 20px;
+  height: 200px;
 }
 
 a {
-  text-decoration: none;
   color:black;
 }
 
@@ -147,9 +160,9 @@ a:hover {
 
 @keyframes link {
   from {
-  font-size: 1em;}
+  color: black;}
   to {
-  font-size: 1.25em;}
+  color: darkcyan;}
 }
 
 @media (max-width:640px) {
