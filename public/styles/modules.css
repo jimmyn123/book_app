@@ -78,6 +78,15 @@ img {
   box-shadow: 3px 3px grey;
 }
 
+.books-search {
+  text-align: center;
+  width: 600px;
+  margin: 10px 10px;
+  padding: 10px;
+  background-color: darkcyan;
+  box-shadow: 3px 3px grey;
+}
+
 .books img {
   margin-top: 5px;
 }
@@ -101,6 +110,10 @@ input::placeholder, textarea::placeholder{
 
 textarea{
   height: 200px;
+}
+
+input {
+  display: inline;
 }
 
 input.submit{

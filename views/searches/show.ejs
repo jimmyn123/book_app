@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head'); %>
+
+<body>
+  <%- include('../partials/header', {pageTitle: 'Search Results!'}) %>
+  <ul>
+    <% books.forEach( book => {  %>
+    <div class="books-search">
+      <li class="book-li">
+        <span id="title">Title:
+          <%= book.title %></span>
+        <span id="author">Author:
+          <%= book.author %></span>
+        <span id="isbn">ISBN:
+          <%= book.isbn %></span>
+        <img id="book-img" src="<%= book.image_url %>">
+        <div class="description">
+          <%= book.description %>
+        </div>
+        <form method="POST" action="/books">
+          <button>Add book!</button>
+        </form>
+      </li>
+    </div>
+    <% }) %>
+  </ul>
+  <p id="book-ct">Book Count:
+    <%= books.length %>
+  </p>
+  <%- include('../partials/footer') %>
+</body>
+
+</html>
