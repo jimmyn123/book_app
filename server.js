@@ -31,7 +31,7 @@ app.get('/searches/new', (req, res) => res.render('searches/new'));
 
 app.post('/books', books.createBook);
 app.get('/books/search', books.searchBook)
-app.use((req, res) => res.render('error'));
+app.use((req, res) => res.render('pages/error'));
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`);

@@ -95,7 +95,12 @@ form{
   text-align: center;
 }
 
-input, textarea{
+label{
+  display: inline-block;
+  width: 30%;
+}
+
+input{
   display: block;
   margin: 30px auto;
   width: 45%;
@@ -104,12 +109,19 @@ input, textarea{
   font-size: 20px;
 }
 
+
 input::placeholder, textarea::placeholder{
   color: black;
 }
 
-textarea{
-  height: 200px;
+fieldset{
+  width: 450px;
+  margin: auto;
+  border: none;
+}
+
+div.radio{
+  background-color: gray;
 }
 
 input {
@@ -117,7 +129,7 @@ input {
 }
 
 input.submit{
-  width: 180px;
+  width: 450px;
   height: 60px;
   background-color: black;
   color: whitesmoke;

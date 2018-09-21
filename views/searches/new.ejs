@@ -5,12 +5,16 @@
 <body>
   <%- include('../partials/header', {pageTitle: 'Search For A Book!'}) %>
   <form method="GET" action="/books/search">
-    <input placeholder="Enter a title or author" type="text" id="search" name="search" />
-    <fieldset>
-      <label for="title">Title</label>
-      <input type="radio" id="title" name="keyword" value="intitle:" />
-      <label for="author">Author</label>
-      <input placeholder="Author" type="radio" id="author" name="keyword" value="inauthor:" />
+    <input placeholder="Enter a title or author" type="text" id="search" name="search" required />
+    <fieldset class="search">
+      <div class="radio">
+        <label for="title">Title</label>
+        <input type="radio" id="title" name="keyword" value="intitle:" required />
+      </div>
+      <div class="radio">
+        <label for="author">Author</label>
+        <input placeholder="Author" type="radio" id="author" name="keyword" value="inauthor:" />
+      </div>
     </fieldset>
     <input class="submit" type="submit" value="Search the Google Books API" />
   </form>
