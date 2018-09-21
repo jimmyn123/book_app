@@ -25,7 +25,7 @@ function getOneBook(req, res) {
   client.query(SQL, values, (err, result) => {
     if (err) {
       console.error(err);
-      res.redirect('/error');
+      res.redirect('/pages/error');
     } else {
       res.render('pages/show', { book: result.rows[0], show: { new: req.params.new } });
     }
@@ -57,16 +57,20 @@ function searchBook(req, res) {
 
   const query = `https://www.googleapis.com/books/v1/volumes?q=${keyword}${search}`;
   superagent.get(query).end((err, apiResponse) => {
+  if(!!apiResponse.body.items){
     let books = apiResponse.body.items.map(book => {
       return {
         title: book.volumeInfo.title || 'Untitled',
-        author: book.volumeInfo.authors[0] || 'No Author',
+        author: book.volumeInfo.authors ? book.volumeInfo.authors[0] : 'No Author',
         description: book.volumeInfo.description || 'No Description',
         isbn: book.volumeInfo.industryIdentifiers[0].identifier || -1,
         image_url: book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://images.unsplash.com/photo-1520467795206-62e33627e6ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cfc662725cdb39805f73a64695af808&auto=format&fit=crop&w=2550&q=80'
       };
     });
     res.render('searches/show', { books: books });
+    }else{
+      res.render('searches/show', { books: []});
+    }
   });
 }
 
