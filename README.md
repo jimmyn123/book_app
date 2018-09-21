@@ -23,6 +23,9 @@ HTML, Javascript, CSS, Express, EJS, DOTENV, PG, Heroku, GitHub
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
 -->
+09-20-2018 12:38pm - Added hamburger.
+09-20-2018 10:31am - Added the confirmtation message.
+09-20-2018 10:00am - Added form feature.
 09-20-2018 8:45am - More styling.
 09-19-2018 9:19pm - Added css. 
 09-19-2018 11:11am - Added partials, css.

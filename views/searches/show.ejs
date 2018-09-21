@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head'); %>
+
+<body>
+  <%- include('../partials/header', {pageTitle: 'Search Results!'}) %>
+  <ul>
+    <% books.forEach( book => {  %>
+    <div class="books">
+      <li class="book-li">
+        <%- include('header', {pageTitle: book.title}); %>
+        <span id="author">By:
+          <%= book.author %></span>
+        <div id="book-container">
+          <div class="book-left">
+            <img id="book-img" src="<%= book.image_url %>">
+            <span id="ISBN">ISBN:
+              <%= book.isbn %></span>
+          </div>
+          <div class="book-right">
+            <span class="desc">
+              <%= book.description %></span>
+          </div>
+        </div>
+      </li>
+    </div>
+    <% }) %>
+  </ul>
+  <p id="book-ct">Book Count:
+    <%= books.length %>
+  </p>
+  <%- include('../partials/footer') %>
+</body>
+
+</html>

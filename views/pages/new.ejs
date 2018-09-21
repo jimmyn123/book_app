@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<%- include('partials/head'); %>
+<%- include('../partials/head'); %>
 
 <body>
-  <%- include('partials/header', {pageTitle: 'Add A New Book!'}) %>
+  <%- include('../partials/header', {pageTitle: 'Add A New Book!'}) %>
   <form method="POST" action="/books">
     <input placeholder="Title" type="text" id="title" name="title" />
     <input placeholder="Author" type="text" id="author" name="author" />
@@ -13,4 +13,5 @@
     <input class="submit" type="submit" />
   </form>
 </body>
+
 </html>
