@@ -6,22 +6,21 @@
   <%- include('../partials/header', {pageTitle: 'Search Results!'}) %>
   <ul>
     <% books.forEach( book => {  %>
-    <div class="books">
+    <div class="books-search">
       <li class="book-li">
-        <%- include('header', {pageTitle: book.title}); %>
-        <span id="author">By:
+        <span id="title">Title:
+          <%= book.title %></span>
+        <span id="author">Author:
           <%= book.author %></span>
-        <div id="book-container">
-          <div class="book-left">
-            <img id="book-img" src="<%= book.image_url %>">
-            <span id="ISBN">ISBN:
-              <%= book.isbn %></span>
-          </div>
-          <div class="book-right">
-            <span class="desc">
-              <%= book.description %></span>
-          </div>
+        <span id="isbn">ISBN:
+          <%= book.isbn %></span>
+        <img id="book-img" src="<%= book.image_url %>">
+        <div class="description">
+          <%= book.description %>
         </div>
+        <form method="POST" action="/books">
+          <button>Add book!</button>
+        </form>
       </li>
     </div>
     <% }) %>

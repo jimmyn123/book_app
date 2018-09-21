@@ -62,8 +62,8 @@ function searchBook(req, res) {
         title: book.volumeInfo.title || 'Untitled',
         author: book.volumeInfo.authors[0] || 'No Author',
         description: book.volumeInfo.description || 'No Description',
-        isbn: book.volumeInfo.industryIdentifiers[0].type || -1,
-        image_url: book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://unsplash.com/photos/MiJTU6lqksg'
+        isbn: book.volumeInfo.industryIdentifiers[0].identifier || -1,
+        image_url: book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://images.unsplash.com/photo-1520467795206-62e33627e6ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cfc662725cdb39805f73a64695af808&auto=format&fit=crop&w=2550&q=80'
       };
     });
     res.render('searches/show', { books: books });
