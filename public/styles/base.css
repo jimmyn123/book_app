@@ -2,6 +2,6 @@ body{
   margin: 0 auto;
   font-family: 'Noto Serif JP', sans-serif;
   background-color: lightgrey;
-  width: 960px;
+  max-width: 960px;
   text-align: center;
 }

@@ -23,9 +23,10 @@ HTML, Javascript, CSS, Express, EJS, DOTENV, PG, Heroku, GitHub, SuperAgent, Goo
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
 -->
-09-21-2018 12:15pm - styled search form.
-09-21-2018 12:00pm - finished add any book from search result to database, display success msg.
-09-21-2018 11:30pm - finished searches, and displayed searches, added readme.
+09-23-2018 12:26pm - Added responsiveness on pages, added hamburger functionality.
+09-21-2018 12:15pm - Styled search form.
+09-21-2018 12:00pm - Finished add any book from search result to database, display success msg.
+09-21-2018 11:30pm - Finished searches, and displayed searches, added readme.
 09-20-2018 12:38pm - Added hamburger.
 09-20-2018 10:31am - Added the confirmtation message.
 09-20-2018 10:00am - Added form feature.

@@ -34,9 +34,11 @@ div.hamburger-menu {
   display: none;
 }
 
-.title {
-  width: 100%;
+.header-menu {
+  margin: auto;
+  width: auto;
 }
+
 
 span{
   display: block;
@@ -56,7 +58,6 @@ span.desc {
   flex-flow: column wrap;
   justify-content: center;
   padding: 20px;
-  /* background-color: darkcyan; */
   box-shadow: 3px 3px grey;
 }
 
@@ -80,6 +81,10 @@ img {
   padding: 10px;
   background-color: darkcyan;
   box-shadow: 3px 3px grey;
+}
+
+#book-img {
+  margin: auto;
 }
 
 .books-search {
@@ -107,6 +112,8 @@ label{
 input{
   display: block;
   margin: 30px auto;
+  max-width: 450px;
+  min-width: 350px;
   width: 45%;
   padding: 10px 10px;
   font-family: sans-serif;
@@ -118,8 +125,10 @@ input::placeholder, textarea::placeholder{
   color: black;
 }
 
-fieldset{
-  width: 450px;
+fieldset{    
+  max-width: 450px;
+  min-width: 374px;
+  width: 49%;
   margin: auto;
   border: none;
 }
@@ -129,7 +138,8 @@ div.radio{
 }
 
 input.submit{
-  width: 450px;
+  width: 50%;
+  min-width: 374px;
   height: 60px;
   background-color: black;
   color: whitesmoke;
@@ -143,6 +153,8 @@ input.submit{
 
 textarea {
   margin: 0px auto;
+  max-width: 450px;
+  min-width: 350px;
   width: 45%;
   padding: 10px 10px;
   font-family: sans-serif;
@@ -165,9 +177,24 @@ a:hover {
   color: darkcyan;}
 }
 
-@media (max-width:640px) {
+@media (max-width:650px) {
   .menu {
     width: 35px;
     display: inline-block;
+  }
+
+  .closed {
+    display: none;
+  }
+
+  #book-container {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .book-left, .book-right {
+    margin: 10px;
+    min-width: 220px;
+    width: 85%;
   }
 }
