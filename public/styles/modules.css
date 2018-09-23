@@ -127,7 +127,8 @@ input::placeholder, textarea::placeholder{
 
 fieldset{    
   max-width: 450px;
-  min-width: 350px;
+  min-width: 374px;
+  width: 49%;
   margin: auto;
   border: none;
 }
@@ -138,6 +139,7 @@ div.radio{
 
 input.submit{
   width: 50%;
+  min-width: 374px;
   height: 60px;
   background-color: black;
   color: whitesmoke;
@@ -181,7 +183,7 @@ a:hover {
     display: inline-block;
   }
 
-  nav {
+  .closed {
     display: none;
   }
 
